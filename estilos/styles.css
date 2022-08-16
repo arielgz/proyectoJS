@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 50%;
+    margin: 10px auto;
+   
+}
+nav ul {
+    list-style-type: none;
+    text-align: end;
+}
+.links-nav > li {
+    position: relative;
+    display: inline-block;
+    text-align: end;
+
+}
+.links-nav > li > a {
+    display: block;
+    padding: 20px  40px ;
+    color: rgb(47, 47, 177);
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+.links-nav li a:hover{
+    color:blueviolet;
+    transition: all 3s;
+
+}
+
+.submenu {
+    position: absolute;
+    width: 120px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.6s;
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+.links-nav li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+.img-user, .img-cart {
+    width: 30px;
+    height: 30px;
+}
+.img-user{
+    margin-right: 50px;
+}
+.img-cart {
+    margin-right: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header ,a {
+    text-decoration: none;
+}
+.logo{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.carousel-inner img {
+    max-height: 600px;
+}
+
+.contenedor {
+    width: 1000px;
+    height: 800px;
+    margin: 100px auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 15px;
+    grid-template-areas: 
+    "foto1 foto1 foto1 foto2 foto2 foto2"
+    "foto1 foto1 foto1 foto2 foto2 foto2"
+    "foto1 foto1 foto1 foto2 foto2 foto2"
+    "foto3 foto3 foto3 foto3 foto3 foto3"
+    "foto3 foto3 foto3 foto3 foto3 foto3"
+    ;
+}
+.foto a {
+    text-decoration: none;
+
+}
+
+.foto1 {
+    grid-area: foto1;
+    background-image: url(../img/abrigo2.webp);
+    background-size: cover;
+    background-position: center;
+
+}
+.foto2 {
+    grid-area: foto2;
+    background-image: url(../img/sweater/seccionsw.webp);
+    background-size: cover;
+    background-position: inherit;
+}
+.foto3 {
+    grid-area: foto3;
+    background-image: url(../img/camisas.jpeg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.titulo-abrigos {
+    font-size: 4rem;
+    font-family:  'Roboto', sans-serif;
+    margin-top: 350px;
+    margin-left: 20px;
+    color: #f9f7ed;
+}
+.titulo-abrigos {
+    font-size: 4rem;
+    font-family:  'Roboto', sans-serif;
+    margin-top: 350px;
+    margin-left: 20px;
+    color: #f9f7ed;
+}
+
+.titulo-secciones {
+    text-align: center;
+    padding: 20px 0px 0px 10px;
+    font-size: 3.2rem;
+    font-family:  'Roboto', sans-serif;
+    letter-spacing: 0.7px;
+}
+
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    
+}
+.content-card{
+    width: 350px;
+    height: auto;
+
+
+}
+.content-card img {
+    width: 100%;
+    margin-top: 30px;
+}
+.texto-card h3 {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+}
+.texto-card span {
+    color: rgb(241, 44, 44);
+    font-size: 1.3rem;
+    margin-left: 140px;
+}
+.btn-card button {
+    width: 200px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f6e932;
+    color:black;
+    margin-left: 70px;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+
+
+
+
+.titulo-formulario {
+    margin-top: 1.8rem;
+    margin-left: 8rem;
+}
+.subtitulo {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.6px;
+    margin-left: 8rem;
+    margin-top: 10px;
+}
+
+.formulario {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+   
+}
+.formulario-content label {
+    padding: 7px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.formulario-content p {
+    display: flex;
+    flex-direction: column;
+
+}
+.formulario-content input {
+    width: 55%;
+    height: 35px;
+
+}
+.boton {
+    margin-top: 30px;
+   
+}
+.boton input {
+    width: 30%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2C3639 ;
+    color: white;
+}
+.iniciar-sesion a {
+    text-decoration: none;
+    font-family:'Roboto', sans-serif ;
+    letter-spacing: 0.6px;
+    color: rgb(21, 21, 21);
+    font-size: 1.2rem;
+    font-weight: 400;
+
+}
+
+
+
+.seccion-usuario {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+     margin-top:  6rem; 
+
+}
+.img-usuario {
+    width: 50%;
+}
+.img-usuario img {
+    width: 100%;
+}
+
+.formulario-usuario p {
+    display: flex;
+    flex-direction: column;
+}
+.formulario-usuario input {
+   width: 350px;
+   height: 35px;
+}
+.formulario-usuario label {
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.boton-usuario input {
+    width: 35%;
+    height: 50px;
+    background-color: rgb(10, 9, 9);
+    color: white;
+}

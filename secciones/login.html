@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/styles.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <a  class="logo" href="../index.html">Blue Cat</a>
+        <nav>
+            <ul class="links-nav">
+                <li><a href="#">Indumentaria</a>
+                    <ul class="submenu">
+                    <li> <a href="../secciones/abrigos.html">Abrigos</a></li>
+                    <li> <a href="../secciones/sweaters.html">Sweaters</a></li>
+                    <li> <a href="../secciones/camisas.html">Camisas</a></li> 
+                    </ul>  
+                </li>
+                <li><a href="#">Oulet</a>  </li>
+                <li><a href="#">Contacto</a>  </li>
+                
+            </ul>
+        </nav>
+        <a href="../secciones/registro.html"><img class="img-user" src="../img/user.png" alt=""></a>
+        <a href="#"><img class="img-cart" src="../img/shopping-bag.png" alt=""></a>
+        
+    </header>
+
+    <main>
+        <section class="seccion-usuario">
+        
+            <div>
+                <h1>Soy Cliente</h1>
+
+                <form class="formulario-usuario" id="formulario-usuario">
+                    <p>
+                        <label for="">Correo Electronico *</label>
+                        <input type="email" id="email-user">
+                    </p>
+                    <p>
+                        <label for="">Contrasenia *</label>
+                        <input type="password" id="password-user">
+                    </p>
+                    <p class="boton-usuario">
+                        <input type="submit" value="Iniciar sesión">
+                    </p>
+                </form>
+                <p>¿Olvidó su Contraseña?</p>
+            </div>
+            <div class="img-usuario">
+                <img src="../img/fotoUsuario.jpg" alt="">
+            </div>
+        </section>
+    </main>
+    
+
+
+    <script src="../javaScript/login.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
