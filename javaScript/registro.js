@@ -21,28 +21,44 @@ class Cliente {
     }
 }
 
-
-formularioRegistro.onsubmit = (e) =>{
-    e.preventDefault()
-
-
-    if(nombreElemento.value !== "", apellidoElemento.value!== "", emailElemento.value !== "",passwordElemento.value !== "" ) {
-        listaDeClientes.push(new Cliente (nombreElemento.value,apellidoElemento.value, emailElemento.value,passwordElemento.value));
-        const listaDeClientesJSON = JSON.stringify(listaDeClientes);
-        localStorage.setItem("lista de clientes",listaDeClientesJSON);
-        window.location.href = "../secciones/login.html"
-        formularioRegistro.reset();
-        console.log(listaDeClientes);
-    }else {
-        swal({
-            title: "Por favor, completé todos los campos",
-            text: "",
-            icon: "warning",
-        });
-        formularioRegistro.reset();
-    }
+const pushearClienteArray = (array, valor) =>{
+        array.push(valor)
 
 }
+const aJsonYSubirLocalStorage = (clave, valor) => {
+    const arrayAJson = JSON.stringify(valor)
+    localStorage.setItem(clave, arrayAJson)
+}
+
+const devolverDelLocalStorage = (clave) => {
+    const arrayDelLocalStorage = localStorage.getItem(clave) || "[]";
+    const parseoDeArray = JSON.parse(arrayDelLocalStorage)
+    return parseoDeArray
+    
+    
+}
+
+formularioRegistro.onsubmit = (e) => {
+    e.preventDefault(e)
+    if(nombreElemento.value !== "",apellidoElemento.value !== "",emailElemento.value !== "", passwordElemento.value !== ""){
+        pushearClienteArray(listaDeClientes, new Cliente (nombreElemento.value, apellidoElemento.value, emailElemento.value, passwordElemento.value));
+        console.log(listaDeClientes)
+        aJsonYSubirLocalStorage("nuevos clientes", listaDeClientes);
+        devolverDelLocalStorage("nuevos clientes");
+        window.location.href = "../secciones/login.html"
+        formularioRegistro.reset()
+    }else {
+        swal({
+            title: "Por favor, complete todos los campos",
+            text: "",
+            icon: "warning",
+            });
+            formularioRegistro.reset();
+    }
+    
+}
+
+
 
 
 
