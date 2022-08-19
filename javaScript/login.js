@@ -14,7 +14,7 @@ function loguear () {
             title: " el Usuario no existe",
             icon: "error", 
          });
-    }else if (nuevoUsuario.userPassword === userPassword.value){
+    }else if (nuevoUsuario.userPassword !== userPassword.value){
         swal({
             title: "Contraseña Incorrecta",
             icon: "error",
