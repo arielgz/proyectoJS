@@ -5,7 +5,7 @@ const respuestaApi = () => {
     fetch("../indumentaria.json")
     .then(respuesta =>respuesta.json())
     .then(data => {
-     mostrarAHtml(data.productos);
+    mostrarAHtml(data.productos);
 
     })
     
@@ -16,7 +16,7 @@ respuestaApi()
 
 const mostrarAHtml = (array) => {
     array.forEach(elemento => {
-        remerasContainer.innerHTML +=`
+        remerasContainer.innerHTML += `
         <div class="content-card">
                 <div class="img-card">
                     <img src=${elemento.img}>
@@ -29,7 +29,7 @@ const mostrarAHtml = (array) => {
                 </div>
             </div> `
         
-    });
+    })
 }
 
 

@@ -97,6 +97,7 @@ header ,a {
     "foto1 foto1 foto1 foto2 foto2 foto2"
     "foto3 foto3 foto3 foto3 foto3 foto3"
     "foto3 foto3 foto3 foto3 foto3 foto3"
+    
     ;
 }
 .foto a {
@@ -123,6 +124,7 @@ header ,a {
     background-size: cover;
     background-position: center; 
 }
+
 
 .titulo-abrigos {
     font-size: 4rem;
