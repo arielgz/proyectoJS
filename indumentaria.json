@@ -1,0 +1,28 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "categoria": "remeras",
+            "nombre": "REMERA ALKAZABA",
+            "precio": 3.990,
+            "img": "../img/remeras/remeras1.webp",
+            "color": "marino"
+        },
+        {
+            "id": 2,
+            "categoria": "remeras",
+            "nombre": "REMERA NATURE",
+            "precio": 4.190,
+            "img": "../img/remeras/remeras2.webp",
+            "color": "gris melange medio"
+        },
+        {
+            "id": 3,
+            "categoria": "remeras",
+            "nombre": "REMERA CAMBER",
+            "precio": 6.490,
+            "img": "../img/remeras/remeras3.webp",
+            "color": "militar"
+        }
+    ]
+}
