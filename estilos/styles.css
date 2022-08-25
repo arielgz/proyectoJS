@@ -287,3 +287,31 @@ header ,a {
     background-color: rgb(10, 9, 9);
     color: white;
 }
+
+
+
+
+.carrito-container {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.compra{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    border: 2px solid blue;
+}
+.resumen-compra {
+    width: 40%;
+    border: 2px solid green;
+}
+
+.compra img {
+    width: 100px;
+}
+.texto-compra {
+
+
+}

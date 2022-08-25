@@ -25,7 +25,8 @@ const mostrarAHtml = (array) => {
                     <h3>${elemento.nombre}</h3>
                     <span>$${elemento.precio.toFixed(3)}</span>
                 </div>
-                <div class="btn-card"><button  id="btn-agregar">Agregar al carrito</button>
+                <div class="btn-card">
+                <button class="btn-agregar">Agregar al carrito</button>
                 </div>
             </div> `
         

@@ -10,9 +10,10 @@ function mostrarIndumentarias (array) {
                 </div>
                 <div class="texto-card">
                     <h3>${elemento.nombre}</h3>
-                    <span>$${elemento.precio.toFixed(3)}</span>
+                    <span>$ ${elemento.precio.toFixed(3)}</span>
                 </div>
-                <div class="btn-card"><button  id="btn-agregar">Agregar al carrito</button>
+                <div class="btn-card"> 
+                <button class="btn-agregar" id="${elemento.id}">Agregar al carrito</button>
                 </div>
             </div> `
         
@@ -28,6 +29,5 @@ function filtrarAbrigos (){
 }
 filtrarAbrigos(indumentaria);
 
-   
 
 
