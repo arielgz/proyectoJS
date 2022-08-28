@@ -1,6 +1,6 @@
-const botonAgregar = document.getElementsByClassName("btn-agregar")
+// const botonAgregar = document.getElementsByClassName("btn-agregar")
 const containerCarrito = document.getElementsByClassName("carrito-container")
-console.log(botonAgregar,containerCarrito)
+// console.log(botonAgregar,containerCarrito)
 
 
 const productosAlCarrito = [];
@@ -8,7 +8,7 @@ console.log(productosAlCarrito)
 
 const convertirAJsonSubirAlLs = (clave, valor) => {
     const arrayJson = JSON.stringify(valor)
-    localStorage.setItem(clave,arrayJson)
+    localStorage.setItem(clave, arrayJson)
 }
 
 const traerDelLs =  (clave) => {
@@ -36,20 +36,23 @@ function mostrarProductosCarrito () {
 
 }
 
-function agregarItemACarrito () {
-    containerCarrito = ""
-    const productoAgregado = indumentaria.find(elemento => elemento.id === id)
-    productosAlCarrito.push(productoAgregado)
+// function agregarItemACarrito () {
+//     containerCarrito = ""
+//     const productoAgregado = indumentaria.find(elemento => elemento.id === id)
+//     productosAlCarrito.push(productoAgregado)
 
-    convertirAJsonSubirAlLs("carrito", productosAlCarrito);
-    traerDelLs("carrito")
-}
+//     convertirAJsonSubirAlLs("carrito", productosAlCarrito);
+//     traerDelLs("carrito")
+// }
 
-botonAgregar.onclick = (e) => {
-    agregarItemACarrito()
-    mostrarProductosCarrito()
-    console.log("hola")
-}
+// botonAgregar.onclick = (e) => {
+//     agregarItemACarrito()
+//     mostrarProductosCarrito()
+//     console.log("hola")
+// }
+
+
+
 
 // const botonAgregar = document.getElementsByClassName("btn-agregar");
 // const carritoElement = document.querySelector("#carrito-container");

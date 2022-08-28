@@ -4,21 +4,43 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:  'Roboto', sans-serif;
+   
 }
+
+
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+header ,a {
+    text-decoration: none;
+}
+.logo{
+    font-size: 3rem;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    margin-left: 50px;
+    color: black;
+   
+}
+
 
 nav {
     width: 50%;
     margin: 10px auto;
-   
 }
 nav ul {
     list-style-type: none;
-    text-align: end;
+    text-align: center;
 }
 .links-nav > li {
     position: relative;
     display: inline-block;
-    text-align: end;
+   
 
 }
 .links-nav > li > a {
@@ -29,22 +51,25 @@ nav ul {
     font-size: 1.4rem;
 }
 .links-nav li a:hover{
-    color:blueviolet;
-    transition: all 3s;
+    color: black;
+    transition: all 2.5s;
 
 }
 
 .submenu {
     position: absolute;
-    width: 120px;
+    width: 215px;
     visibility: hidden;
     opacity: 0;
     transition: opacity 1.6s;
+    
 }
 .submenu li a{
     display: block;
-    padding: 15px;
+    padding: 20px;
+    font-size: 1.2rem;
     text-decoration: none;
+    color: rgb(19, 18, 18);
 }
 .links-nav li:hover .submenu{
     visibility: visible;
@@ -62,21 +87,7 @@ nav ul {
     margin-right: 50px;
 }
 
-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-header ,a {
-    text-decoration: none;
-}
-.logo{
-    font-size: 3rem;
-    font-weight: 500;
-    margin-left: 50px;
-    margin-bottom: 20px;
-    color: black;
-}
+
 
 .carousel-inner img {
     max-height: 600px;
@@ -128,14 +139,13 @@ header ,a {
 
 .titulo-abrigos {
     font-size: 4rem;
-    font-family:  'Roboto', sans-serif;
     margin-top: 350px;
     margin-left: 20px;
     color: #f9f7ed;
+    
 }
 .titulo-abrigos {
     font-size: 4rem;
-    font-family:  'Roboto', sans-serif;
     margin-top: 350px;
     margin-left: 20px;
     color: #f9f7ed;
@@ -145,7 +155,6 @@ header ,a {
     text-align: center;
     padding: 20px 0px 0px 10px;
     font-size: 3.2rem;
-    font-family:  'Roboto', sans-serif;
     letter-spacing: 0.7px;
 }
 
@@ -154,6 +163,8 @@ header ,a {
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+   
+    
     
 }
 .content-card{
@@ -179,10 +190,10 @@ header ,a {
 }
 .btn-card button {
     width: 200px;
-    height: 35px;
+    height: 40px;
     border: none;
     border-radius: 10px;
-    background-color: #f6e932;
+    background-color: #E6D2AA;
     color:black;
     margin-left: 70px;
     margin-top: 10px;
@@ -191,69 +202,79 @@ header ,a {
 }
 
 
-
-
-
-.titulo-formulario {
-    margin-top: 1.8rem;
-    margin-left: 8rem;
-}
-.subtitulo {
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.6px;
-    margin-left: 8rem;
-    margin-top: 10px;
-}
-
-.formulario {
-    width: 80%;
-    margin: auto;
-    margin-top: 20px;
-   
-}
-.formulario-content label {
-    padding: 7px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-}
-.formulario-content p {
+.seccion-formularios {
     display: flex;
-    flex-direction: column;
-
-}
-.formulario-content input {
-    width: 55%;
-    height: 35px;
-
-}
-.boton {
+    align-items: center;
+    height: auto;
     margin-top: 30px;
+    gap: 50px;
    
+
 }
-.boton input {
-    width: 30%;
-    height: 50px;
-    border-radius: 10px;
-    border: none;
-    background-color: #2C3639 ;
-    color: white;
+
+.form-titulo {
+    margin-top: 1rem;
+    margin-left: -5px;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+
 }
-.iniciar-sesion a {
-    text-decoration: none;
-    font-family:'Roboto', sans-serif ;
-    letter-spacing: 0.6px;
-    color: rgb(21, 21, 21);
+.form-subtitulo {
     font-size: 1.2rem;
+    padding: 5px;
     font-weight: 400;
 
 }
 
 
+.formulario-registro {
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 170px;
+    background-color: #f3f3f3;
+   
+}
+.form-content label {
+    padding: 7px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.form-content p {
+    display: flex;
+    flex-direction: column;
 
-.seccion-usuario {
+}
+.form-content input {
+    width: 80%;
+    height: 35px;
+
+}
+
+.boton-registro input {
+    width: 30%;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    background-color: #283235 ;
+    color: white;
+    margin-top: 10px;
+}
+.iniciar-sesion a {
+    text-decoration: none;
+    letter-spacing: 0.6px;
+    color: rgb(21, 21, 21);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 8px;
+
+}
+
+
+
+/* .seccion-usuario {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -265,53 +286,78 @@ header ,a {
 }
 .img-usuario img {
     width: 100%;
-}
+} */
 
-.formulario-usuario p {
+
+
+.titulo-login{
+    font-size: 1.5rem;
+    padding: 5px;
+    font-weight: 500;
+}
+.form-login{
+    width: 50%;
+    margin-right: 30px;
+    margin-bottom: 150px;
+}
+.formulario-usuario ,p {
     display: flex;
     flex-direction: column;
 }
-.formulario-usuario input {
-   width: 350px;
+.formulario-usuario, input {
+   width: 70%;
    height: 35px;
 }
-.formulario-usuario label {
-    padding: 10px;
-    font-family: 'Roboto', sans-serif;
+.formulario-usuario ,label {
+    padding: 7px;
     font-size: 1.2rem;
     letter-spacing: 1px;
 }
-.boton-usuario input {
+.boton-usuario .btn-usuario {
     width: 35%;
-    height: 50px;
-    background-color: rgb(10, 9, 9);
+    height: 45px;
     color: white;
+    background-color: #2C3639;
+    border-radius: 8px;
+    border: none;
+    margin-top: 10px;
 }
 
 
 
 
 .carrito-container {
-    border: 1px solid red;
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    gap: 3rem;
+
+
 }
 .compra{
-    display: flex;
-    justify-content: center;
     width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     border: 2px solid blue;
+    gap:1rem;
+    
 }
 .resumen-compra {
     width: 40%;
     border: 2px solid green;
+   
 }
 
 .compra img {
-    width: 100px;
+    width: 7rem;
 }
-.texto-compra {
-
+.compra button {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
 
 }
+

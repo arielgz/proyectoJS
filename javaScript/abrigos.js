@@ -1,4 +1,7 @@
 const containerAbrigo = document.querySelector("#containerCard-abrigos");
+const botonAgregar = document.getElementsByClassName("btn-agregar");
+
+console.log(botonAgregar);
 
 
 function mostrarIndumentarias (array) {
@@ -13,9 +16,9 @@ function mostrarIndumentarias (array) {
                     <span>$ ${elemento.precio.toFixed(3)}</span>
                 </div>
                 <div class="btn-card"> 
-                <button class="btn-agregar" id="${elemento.id}">Agregar al carrito</button>
+                <button class="btn-agregar" id=${elemento.id}>Agregar al carrito</button>
                 </div>
-            </div> `
+        </div> `
         
     });
 }
@@ -28,6 +31,32 @@ function filtrarAbrigos (){
     mostrarIndumentarias(abrigosFiltrados);
 }
 filtrarAbrigos(indumentaria);
+
+
+
+
+function agregarItemACarrito (e) {
+    containerCarrito.innerHTML = "";
+    const boton = e.target;
+    console.log(boton)
+    const botonId = boton.getAttribute("id");
+    const productoAgregado = indumentaria.find(elemento => elemento.id === botonId);
+    productosAlCarrito.push(productoAgregado);
+    console.log(productoAgregado)
+
+    convertirAJsonSubirAlLs("carrito", productosAlCarrito);
+    traerDelLs("carrito")
+
+    
+}
+    
+    
+
+
+for (boton of botonAgregar) {
+    boton.addEventListener("click" ,agregarItemACarrito)
+}
+
 
 
 
