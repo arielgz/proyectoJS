@@ -1,5 +1,6 @@
 const containerAbrigo = document.querySelector("#containerCard-abrigos");
-const botonAgregar = document.getElementsByClassName("btn-agregar");
+// const botonAgregar = document.getElementsByClassName("btn-agregar");
+// const containerCarrito = document.getElementsByClassName("seccion-carrito")
 
 console.log(botonAgregar);
 
@@ -35,27 +36,54 @@ filtrarAbrigos(indumentaria);
 
 
 
+
+
+
 function agregarItemACarrito (e) {
-    containerCarrito.innerHTML = "";
-    const boton = e.target;
-    console.log(boton)
-    const botonId = boton.getAttribute("id");
-    const productoAgregado = indumentaria.find(elemento => elemento.id === botonId);
-    productosAlCarrito.push(productoAgregado);
-    console.log(productoAgregado)
+    const boton = e.target
+    const botonId = Number(boton.id)
+    const productoAgregado = indumentaria.find(elemento => elemento.id === botonId)
+    productosAlCarrito.push(productoAgregado)
 
     convertirAJsonSubirAlLs("carrito", productosAlCarrito);
     traerDelLs("carrito")
 
-    
+
+    Toastify({
+        text: `Agregaste ${productoAgregado.nombre}  al carrito`,
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "bottom", // `top` or `bottom`
+        position: "left", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #373B44, ,#4286f4)"
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+
+    // Toastify({
+
+    //             text: `Agregaste ${productoAgregado.nombre}  al carrito`,
+                
+    //             duration: 3000
+                
+    //             }).showToast();
+        
+
+    mostrarProductosCarrito()
+
 }
-    
-    
 
 
-for (boton of botonAgregar) {
-    boton.addEventListener("click" ,agregarItemACarrito)
+
+for ( boton of botonAgregar) {
+    boton.addEventListener("click", agregarItemACarrito)
 }
+
+
+
 
 
 

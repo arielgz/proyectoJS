@@ -191,7 +191,7 @@ nav ul {
 .btn-card button {
     width: 200px;
     height: 40px;
-    border: none;
+
     border-radius: 10px;
     background-color: #E6D2AA;
     color:black;
@@ -324,32 +324,53 @@ nav ul {
 }
 
 
+.seccion-carrito {
+   display: flex;
+   justify-content: space-around;
+   gap: 3rem;
+   margin-top: 100px;
+   
 
-
-.carrito-container {
-    display: flex;
-    gap: 3rem;
 
 
 }
-.compra{
-    width: 50%;
+
+.productoEnCarrito{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    border: 2px solid blue;
-    gap:1rem;
-    
-}
-.resumen-compra {
-    width: 40%;
-    border: 2px solid green;
+    flex-direction: column;
+    gap: 0.5rem;
    
 }
+.compra{
+display: flex;
+align-items: center;
+gap: 2rem;
+border: 0.5px solid grey;
+box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+width: 105%; 
+}
+.compra h3 {
+    font-size: 1rem;
+}
+
+.seccion-resumen {
+    display: flex;
+}
+.resumen-compra {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+
+
+   
+    
+
+
 
 .compra img {
-    width: 7rem;
+    width: 6rem;
 }
 .compra button {
     width: 30px;

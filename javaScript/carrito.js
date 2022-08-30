@@ -1,5 +1,5 @@
-// const botonAgregar = document.getElementsByClassName("btn-agregar")
-const containerCarrito = document.getElementsByClassName("carrito-container")
+ const botonAgregar = document.getElementsByClassName("btn-agregar")
+const containerCarrito = document.getElementsByClassName("productoEnCarrito")
 // console.log(botonAgregar,containerCarrito)
 
 
@@ -18,44 +18,21 @@ const traerDelLs =  (clave) => {
 
 
 function mostrarProductosCarrito () {
-  productosAlCarrito.forEach(elemento =>{
-    containerCarrito.innerHtml += `
+productosAlCarrito.forEach(elemento =>{
+    containerCarrito.innerHTML += `
     <div class="compra">
-    <img src=${elemento.img} alt="">
-    
-        <h3>${elemento.nombre}</h3>  <h3>$ ${elemento.precio}</h3>
-        <button class="bnt-borrar" id="${elemento.ic}">X</button>
+    <img src=${elemento.img} alt="abrigos">
+        <h3>${elemento.nombre}</h3>  
+        <h3>$ ${elemento.precio}</h3>
+        <button class="bnt-borrar" id="${elemento.id}">X</button>
     </div>
-        <div class="resumen-compra">
-        <p>Resumen de tu cuenta</p>
-        <button>Elegir más productos</button>  
-    </div>
-    
     `
 })
 
 }
 
-// function agregarItemACarrito () {
-//     containerCarrito = ""
-//     const productoAgregado = indumentaria.find(elemento => elemento.id === id)
-//     productosAlCarrito.push(productoAgregado)
-
-//     convertirAJsonSubirAlLs("carrito", productosAlCarrito);
-//     traerDelLs("carrito")
-// }
-
-// botonAgregar.onclick = (e) => {
-//     agregarItemACarrito()
-//     mostrarProductosCarrito()
-//     console.log("hola")
-// }
 
 
-
-
-// const botonAgregar = document.getElementsByClassName("btn-agregar");
-// const carritoElement = document.querySelector("#carrito-container");
 
 
 
